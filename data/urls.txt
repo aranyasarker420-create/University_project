@@ -1,0 +1,204 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# urls.txt  —  University programme pages for bulk scraping
+# Run:  python scripts/scrape_and_extract.py --batch data/urls.txt
+# Lines starting with # are ignored.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+
+# ── NORWAY ────────────────────────────────────────────────────────────────────
+# Free tuition for all students including international — very popular destination
+
+https://www.uio.no/english/studies/programmes/computational-science-master/
+https://www.uio.no/english/studies/programmes/informatics-master/
+https://www.ntnu.edu/studies/msit
+https://www.ntnu.edu/studies/macs
+https://www.ntnu.edu/studies/mcs
+https://www.uib.no/en/studies/MASV-INF
+https://www.uis.no/en/studies/master-of-science-in-computer-science
+https://www.uis.no/en/studies/master-of-science-in-computational-engineering
+https://www.oslomet.no/en/study/faculty-of-technology-art-and-design/applied-computer-science-master
+https://www.nord.no/en/studies/master-of-science-in-data-science
+
+
+# ── NETHERLANDS ───────────────────────────────────────────────────────────────
+# Strong tech industry, English-taught, Erasmus hub
+
+https://www.tudelft.nl/en/education/programmes/masters/cs/msc-computer-science/admission-and-application
+https://www.tudelft.nl/en/education/programmes/masters/dsait/msc-data-science-and-artificial-intelligence-technology
+https://www.tue.nl/en/education/graduate-school/masters-programs/data-science-in-engineering/admission-and-registration
+https://www.tue.nl/en/education/graduate-school/masters-programs/computer-science-and-engineering/admission-and-registration
+https://www.rug.nl/masters/computing-science/admission
+https://www.utwente.nl/en/education/master/programmes/computer-science/admission/
+https://www.utwente.nl/en/education/master/programmes/data-science-technology/admission/
+https://www.universiteitleiden.nl/en/education/master/computer-science/admission-and-application
+https://www.amsterdamuas.com/study/master/master-artificial-intelligence/master-ai.html
+https://www.vu.nl/en/education/master/computer-science/index.aspx
+
+
+# ── IRELAND ───────────────────────────────────────────────────────────────────
+# English-speaking EU country, strong tech hub (Google, Meta, Apple HQ in Dublin)
+
+https://www.tcd.ie/courses/postgraduate/courses/computer-science---data-science--mscpgraddip/
+https://www.tcd.ie/courses/postgraduate/courses/computer-science---intelligent-systems--mscpgraddip/
+https://www.tcd.ie/courses/postgraduate/courses/computer-science---future-networked-systems--mscpgraddip/
+https://www.ucd.ie/courses/msc-computer-science
+https://www.ucd.ie/courses/msc-data-analytics
+https://www.ucc.ie/en/ckr22/
+https://www.ul.ie/gps/courses/msc-artificial-intelligence
+https://www.dcu.ie/courses/postgraduate/computing/msc-data-analytics
+https://www.nuigalway.ie/courses/taught-postgraduate-courses/computer-science-data-analytics.html
+https://www.maynoothuniversity.ie/computer-science/our-courses/msc-computer-science
+
+
+# ── AUSTRALIA ─────────────────────────────────────────────────────────────────
+# Post-study work visa up to 4 years, strong PR pathway
+
+https://study.unimelb.edu.au/find/courses/graduate/master-of-computer-science/
+https://study.unimelb.edu.au/find/courses/graduate/master-of-data-science/
+https://www.unsw.edu.au/study/postgraduate/master-of-information-technology
+https://www.unsw.edu.au/study/postgraduate/master-of-data-science-and-decisions
+https://programsandcourses.anu.edu.au/program/7706xmcomp
+https://www.sydney.edu.au/courses/courses/pc/master-of-information-technology0.html
+https://www.adelaide.edu.au/degree-finder/mcs_mmachsc.html
+https://www.monash.edu/it/master-of-information-technology
+https://www.qut.edu.au/courses/master-of-information-technology
+https://www.curtin.edu.au/study/offering/course-pg-master-of-computing--mc-cmptn/
+
+
+# ── NEW ZEALAND ───────────────────────────────────────────────────────────────
+# 3-year post-study work visa, pathway to PR
+
+https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-information-technology.html
+https://www.otago.ac.nz/computer-science/postgraduate/
+https://www.victoria.ac.nz/explore/postgraduate-study/masters-study/master-of-science-in-computer-science
+https://www.waikato.ac.nz/study/qualifications/master-of-science-and-technology
+https://www.canterbury.ac.nz/study/academic-study/subjects/computer-science-and-software-engineering/postgraduate
+
+
+# ── DENMARK ───────────────────────────────────────────────────────────────────
+# Free tuition for EU students, low cost for non-EU, high quality of life
+
+https://www.dtu.dk/english/education/graduate/msc-programmes/computer-science-and-modelling
+https://www.dtu.dk/english/education/graduate/msc-programmes/human-centered-artificial-intelligence
+https://studies.ku.dk/masters/computer-science/
+https://studies.ku.dk/masters/data-science/
+https://en.itu.dk/Programmes/MSc-Programmes/Software-Design
+https://en.itu.dk/Programmes/MSc-Programmes/Data-Science
+
+
+# ── SWITZERLAND ───────────────────────────────────────────────────────────────
+# ETH Zurich and EPFL are world top 20 universities
+
+https://inf.ethz.ch/studies/master.html
+https://www.epfl.ch/education/master/programs/computer-science/
+https://www.epfl.ch/education/master/programs/data-science/
+https://www.uzh.ch/cmsssl/en/studies/application/master.html
+https://www.unibas.ch/en/Studies/Programmes/Master/Master-Computer-Science.html
+
+
+# ── AUSTRIA ───────────────────────────────────────────────────────────────────
+# Affordable tuition (~€750/semester), central Europe
+
+https://www.tuwien.at/en/studies/study-programmes/master-programmes/computer-engineering
+https://www.tuwien.at/en/studies/study-programmes/master-programmes/data-science
+https://www.univie.ac.at/en/research/research-at-the-university-of-vienna/
+https://informatik.jku.at/studies/master/
+https://www.aau.at/en/studies/master/information-technology/
+
+
+# ── BELGIUM ───────────────────────────────────────────────────────────────────
+# Affordable EU country, multilingual
+
+https://www.kuleuven.be/english/education/programmes/master-of-science-in-computer-science
+https://www.kuleuven.be/english/education/programmes/master-of-science-in-artificial-intelligence
+https://www.ugent.be/en/programmes/masters/cs
+https://www.vub.be/en/studying-vub/all-study-programmes/masters/master-computer-science
+
+
+# ── CZECH REPUBLIC ────────────────────────────────────────────────────────────
+# Very low tuition, growing tech scene, Schengen zone
+
+https://www.fit.cvut.cz/en/study/programmes/master
+https://www.fel.cvut.cz/en/education/master/
+https://www.fi.muni.cz/admission/master.html
+
+
+# ── ESTONIA ───────────────────────────────────────────────────────────────────
+# Digital-first country, most affordable EU tech education
+
+https://www.taltech.ee/en/admission/masters-study/information-technology
+https://www.ut.ee/en/it-masters
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# urls_new_30.txt  —  30 new universities: USA, Italy, Malta + extras
+# Add these lines to your existing data/urls.txt
+# Run:  python scripts/scrape_and_extract.py --batch data/urls.txt
+# ═══════════════════════════════════════════════════════════════════════════════
+
+
+# ── USA ───────────────────────────────────────────────────────────────────────
+# High tuition but world-class, OPT work permit 3 years for STEM
+
+https://www.cs.cmu.edu/education/graduate-admissions
+https://msaii.cs.cmu.edu/how-apply
+https://www.cs.stanford.edu/admissions/masters-admissions-frequently-asked-questions
+https://www.eecs.mit.edu/academics/graduate-programs/admission-process/graduate-admissions-faqs
+https://cs.illinois.edu/admissions/graduate/applications-process-requirements
+https://www.cs.washington.edu/academics/grad/admissions
+https://engineering.purdue.edu/CS/Academics/GraduateStudents/Admission
+https://www.cs.utexas.edu/graduate-programs/masters-program/apply
+https://www.cc.gatech.edu/future/masters/mscs/apply
+https://www.cs.columbia.edu/education/ms/applyToMS
+
+
+# ── ITALY ─────────────────────────────────────────────────────────────────────
+# Very affordable tuition (€1,000–€3,000/yr), English-taught MSc programs
+# 12-month post-study job seeker permit after graduation
+
+https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-magistrale
+https://corsi.unibo.it/2cycle/ComputerScience/how-to-enrol
+https://corsi.unibo.it/2cycle/ArtificialIntelligence/how-to-enrol
+https://www.polito.it/en/education/applying-studying-graduating/admissions-and-enrolment/master-s-degree-programmes/applicants-with-a-non-italian-qualification
+https://www.unipi.it/index.php/english/item/12716-how-to-apply-masters-degrees
+https://www.unipd.it/en/educational-offer/second-cycle-degrees/faculty-of-science?ordinamento=2021&key=IN2371
+https://www.sapienza.uniroma1.it/en/648/how-to-enroll
+https://www.unitn.it/en/ateneo/16972/apply-now
+https://international.unimi.it/study-milan/apply/how-apply-degree-programmes
+
+
+# ── MALTA ─────────────────────────────────────────────────────────────────────
+# English-speaking EU country, very affordable, easy visa, warm climate
+# IELTS ~6.0 required, tuition €4,000–€8,000/yr for non-EU
+
+https://www.um.edu.mt/courses/overview/MSCAICS-2025-6-O
+https://www.um.edu.mt/courses/overview/MSCAIS-2025-6-O
+https://www.um.edu.mt/ict/cs/students/learnaboutourdegrees
+https://www.um.edu.mt/international/students/tuitionfees
+https://www.um.edu.mt/study/admissionsadvice/international
+
+
+# ── PORTUGAL ──────────────────────────────────────────────────────────────────
+# Affordable EU, NHR tax regime, growing tech hub in Lisbon
+# Tuition ~€1,200–€2,500/yr, IELTS 6.0–6.5
+
+https://tecnico.ulisboa.pt/en/courses/meic-a/admission/
+https://www.fct.unl.pt/en/education/course/master-computer-science
+https://www.uc.pt/en/fctuc/dei/courses/miei/admissions
+https://sigarra.up.pt/feup/en/CUR_GERAL.CUR_GRAD_SHOW?pv_curso_id=742
+
+
+# ── HUNGARY ───────────────────────────────────────────────────────────────────
+# Very low tuition (~€1,500–€3,000/yr), Stipendium Hungaricum full scholarship
+# Excellent for Bangladeshi students — Bangladesh is a partner country
+
+https://www.bme.hu/en/admission/msc
+https://inf.elte.hu/en/research/programmes/msc
+https://www.uni-miskolc.hu/en/study-at-me/programmes/master/computer-science-engineering
+
+
+# ── JAPAN ─────────────────────────────────────────────────────────────────────
+# MEXT scholarship covers full tuition + living allowance
+# English-taught programs growing rapidly
+
+https://www.i.u-tokyo.ac.jp/edu/enroll/application_e.shtml
+https://www.naist.jp/en/prospective_students/graduate_programs/

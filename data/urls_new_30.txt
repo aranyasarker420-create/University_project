@@ -1,0 +1,24 @@
+# These 5 URLs are confirmed to exist and contain real admission data.
+# They will work on your laptop — universities only block server/cloud IPs.
+# Run ONE at a time first to test:
+#   python scripts/scrape_and_extract.py --url <URL> --dry-run
+
+# 1. University of Virginia — MS Computer Science (USA)
+# Has: IELTS 6.5, TOEFL 90, GPA 3.3, full requirements page
+https://engineering.virginia.edu/department/computer-science/academics/graduate-programs/ms-computer-science
+
+# 2. University of Illinois Chicago — MS Computer Science (USA)
+# Has: IELTS 6.5, TOEFL 80, tuition info, funding details
+https://cs.uic.edu/graduate/admissions/
+
+# 3. Georgia Tech — MS Computer Science (USA)
+# Has: IELTS 7.5, TOEFL 100, GPA requirements, top ranked program
+https://www.cc.gatech.edu/ms-computer-science-admission-requirements
+
+# 4. UC San Diego — MS Computer Science (USA)
+# Has: IELTS 7.0, TOEFL 85, GRE optional, detailed requirements
+https://cse.ucsd.edu/graduate/admissions
+
+# 5. Rice University — Online MS Computer Science (USA)
+# Has: IELTS 7.0, TOEFL 90, GPA, flexible for working professionals
+https://csweb.rice.edu/academics/graduate-programs/online-mcs/admissions

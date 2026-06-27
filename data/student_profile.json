@@ -1,0 +1,22 @@
+{
+  "student_id": 1,
+  "name": "Test Student",
+  "target_degree": "Masters",
+  "target_program_category": "Engineering & Technology",
+  "preferred_country": "Finland",
+  "cgpa": 3.2,
+  "cgpa_scale": 4.0,
+  "ielts_score": 6.5,
+  "toefl_score": null,
+  "gre_score": null,
+  "budget_usd_per_year": 18000,
+  "research_experience": true,
+  "research_experience_years": 1.5,
+  "published_paper_count": 2,
+  "journal_paper_count": 1,
+  "conference_paper_count": 1,
+  "first_author_paper_count": 1,
+  "indexed_publication": true,
+  "work_experience_years": 1,
+  "scholarship_needed": true
+}
