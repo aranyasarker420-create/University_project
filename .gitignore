@@ -1,12 +1,67 @@
+# Database files
+*.db
+
 # Python
-venv/
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.ENV
+.python-version
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+.directory
+.Trashes
+*.nib
+*~.nib
+.viminfo
+
+# Environment specific
+.env
+.env.local
+*.env
+*.env.local
 
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
 
-# OS
-.DS_Store
-Thumbs.db
+# Build and distribution
+dist/
+build/
+*.egg-info/
+.eggs/
+.coverage
+htmlcov/
+coverage/
+.mypy_cache/
+.pytest_cache/
+.tox/
+.hypothesis/
+
+# Scripts
+scripts/__pycache__/
+*.pyc
+
+# Data
+*.db-shm
+*.db-wal
