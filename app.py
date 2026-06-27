@@ -31,39 +31,157 @@ st.set_page_config(
 # ──────────────────────────────────────────────────────────────────────────────
 st.markdown("""
 <style>
-    .main .block-container { padding-top: 2rem; max-width: 1100px; }
-    h1 { font-size: 1.9rem !important; font-weight: 700 !important; letter-spacing: -0.5px; }
+    /* Main layout */
+    .main .block-container { padding-top: 2rem; max-width: 1200px; }
+    h1 { font-size: 2.2rem !important; font-weight: 700 !important; letter-spacing: -0.5px; color: #1e293b; }
+    h2 { font-size: 1.5rem !important; font-weight: 600 !important; color: #334155; }
+    h3 { font-size: 1.1rem !important; font-weight: 600 !important; }
 
+    /* Score badges with gradient */
     .score-badge {
         display: inline-block;
-        padding: 4px 14px;
+        padding: 6px 16px;
         border-radius: 20px;
-        font-size: 0.85rem;
-        font-weight: 600;
+        font-size: 0.9rem;
+        font-weight: 700;
         letter-spacing: 0.5px;
+        text-align: center;
+        min-width: 100px;
     }
-    .score-high     { background:#dcfce7; color:#166534; }
-    .score-good     { background:#dbeafe; color:#1e40af; }
-    .score-moderate { background:#fef9c3; color:#854d0e; }
-    .score-low      { background:#fee2e2; color:#991b1b; }
+    .score-excellent { 
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%); 
+        color: white; 
+        box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+    }
+    .score-high { 
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); 
+        color: white;
+        box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+    }
+    .score-good { 
+        background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); 
+        color: white;
+        box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+    }
+    .score-moderate { 
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); 
+        color: white;
+        box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+    }
+    .score-low { 
+        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); 
+        color: white;
+        box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+    }
 
+    /* Enhanced university cards */
     .uni-card {
-        background: #f9fafb;
-        border: 1px solid #e5e7eb;
-        border-left: 4px solid #6366f1;
-        border-radius: 10px;
-        padding: 1.2rem 1.4rem;
-        margin-bottom: 1.1rem;
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        border: 1px solid #e2e8f0;
+        border-left: 5px solid #6366f1;
+        border-radius: 12px;
+        padding: 1.4rem 1.6rem;
+        margin-bottom: 1.2rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     }
-    .uni-card h3 { margin: 0 0 4px 0; font-size: 1.1rem; font-weight: 700; }
-    .uni-card p  { margin: 0; color: #6b7280; font-size: 0.9rem; }
+    .uni-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+    .uni-card h3 { 
+        margin: 0 0 6px 0; 
+        font-size: 1.2rem; 
+        font-weight: 700; 
+        color: #1e293b;
+    }
+    .uni-card p { 
+        margin: 0; 
+        color: #64748b; 
+        font-size: 0.92rem;
+        line-height: 1.5;
+    }
 
-    .pill-pass { background:#f0fdf4; border:1px solid #86efac; color:#166534;
-                 border-radius:6px; padding:3px 10px; font-size:0.82rem;
-                 display:inline-block; margin:2px; }
-    .pill-fail { background:#fff1f2; border:1px solid #fca5a5; color:#991b1b;
-                 border-radius:6px; padding:3px 10px; font-size:0.82rem;
-                 display:inline-block; margin:2px; }
+    /* Pill badges for criteria */
+    .pill-pass { 
+        background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%); 
+        border: 1px solid #86efac; 
+        color: #166534;
+        border-radius: 8px; 
+        padding: 5px 12px; 
+        font-size: 0.85rem;
+        font-weight: 500;
+        display: inline-block; 
+        margin: 3px;
+    }
+    .pill-fail { 
+        background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); 
+        border: 1px solid #fca5a5; 
+        color: #991b1b;
+        border-radius: 8px; 
+        padding: 5px 12px; 
+        font-size: 0.85rem;
+        font-weight: 500;
+        display: inline-block; 
+        margin: 3px;
+    }
+    .pill-neutral { 
+        background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); 
+        border: 1px solid #cbd5e1; 
+        color: #475569;
+        border-radius: 8px; 
+        padding: 5px 12px; 
+        font-size: 0.85rem;
+        display: inline-block; 
+        margin: 3px;
+    }
+
+    /* Metric cards */
+    .metric-card {
+        background: white;
+        border-radius: 10px;
+        padding: 1rem 1.2rem;
+        border: 1px solid #e2e8f0;
+        text-align: center;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .metric-value {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #6366f1;
+    }
+    .metric-label {
+        font-size: 0.85rem;
+        color: #64748b;
+        margin-top: 0.3rem;
+    }
+
+    /* Info banner */
+    .info-banner {
+        background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+        border-left: 4px solid #3b82f6;
+        border-radius: 8px;
+        padding: 1rem 1.2rem;
+        margin-bottom: 1.5rem;
+        color: #1e40af;
+    }
+
+    /* Sidebar styling */
+    .sidebar-content {
+        background: #f8fafc;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+    
+    /* Section headers */
+    .section-header {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #475569;
+        margin: 1.2rem 0 0.6rem 0;
+        padding-bottom: 0.3rem;
+        border-bottom: 2px solid #e2e8f0;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -107,10 +225,11 @@ def load_programs_list() -> list[str]:
 
 def chance_badge(chance: str) -> str:
     cls = {
-        "High":     "score-high",
-        "Good":     "score-good",
-        "Moderate": "score-moderate",
-        "Low":      "score-low",
+        "Excellent": "score-excellent",
+        "High":      "score-high",
+        "Good":      "score-good",
+        "Moderate":  "score-moderate",
+        "Low":       "score-low",
     }.get(chance, "score-low")
     return f'<span class="score-badge {cls}">{chance}</span>'
 
@@ -119,11 +238,15 @@ def chance_badge(chance: str) -> str:
 # Sidebar — student profile
 # ──────────────────────────────────────────────────────────────────────────────
 with st.sidebar:
-    st.markdown("## 🎓 Your Profile")
-    st.caption("Fill in your details. Results update instantly.")
-
-    st.markdown("**Degree & Program**")
-    target_degree   = st.selectbox("Target Degree", ["Masters", "Bachelors", "PhD"])
+    st.markdown("""
+    <div style="text-align:center; padding: 1rem 0;">
+        <h2 style="color:#6366f1; margin-bottom:0.5rem;">🎓 Your Profile</h2>
+        <p style="color:#64748b; font-size:0.9rem;">Fill in your details for personalized matches</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown('<div class="section-header">📚 Degree & Program</div>', unsafe_allow_html=True)
+    target_degree   = st.selectbox("Target Degree", ["Masters", "Bachelors", "PhD"], index=0)
     target_category = st.selectbox("Program Category", [
         "Engineering & Technology",
         "Business & Management",
@@ -131,57 +254,51 @@ with st.sidebar:
         "Medicine & Health",
         "Social Sciences",
         "Arts & Humanities",
-    ])
+        "Data Science",
+        "Natural Sciences",
+    ], index=0)
 
-    st.markdown("---")
-    st.markdown("**Destination**")
+    st.markdown('<div class="section-header">🌍 Destination</div>', unsafe_allow_html=True)
 
     countries = load_countries()
-    # Dropdown of all countries actually in the DB — no hardcoded default
     preferred_country_select = st.selectbox(
         "Preferred Country",
         countries,
-        index=0,   # defaults to "Any"
+        index=0,
     )
-    # Also allow free-text override for countries not yet in DB
     preferred_country_text = st.text_input(
-        "Or type a country not in the list above", ""
+        "Or type a country not in the list", ""
     )
-    # Text input takes priority if filled
     preferred_country = preferred_country_text.strip() if preferred_country_text.strip() else (
         "" if preferred_country_select == "Any" else preferred_country_select
     )
 
-    st.markdown("---")
-    st.markdown("**Academic Scores**")
-    cgpa       = st.number_input("CGPA",    min_value=0.0, max_value=4.0,  value=3.2, step=0.05, format="%.2f")
+    st.markdown('<div class="section-header">📊 Academic Scores</div>', unsafe_allow_html=True)
+    cgpa       = st.number_input("CGPA",    min_value=0.0, max_value=4.0,  value=3.5, step=0.05, format="%.2f")
     cgpa_scale = st.selectbox("CGPA Scale", [4.0, 5.0, 10.0], index=0)
-    ielts      = st.number_input("IELTS",   min_value=0.0, max_value=9.0,  value=6.5, step=0.5,  format="%.1f")
+    ielts      = st.number_input("IELTS",   min_value=0.0, max_value=9.0,  value=7.0, step=0.5,  format="%.1f")
     toefl      = st.number_input("TOEFL iBT (0 = not taken)", min_value=0, max_value=120, value=0)
+    gre_score  = st.number_input("GRE Score (optional, 0 = not taken)", min_value=0, max_value=340, value=0)
+    gmat_score = st.number_input("GMAT Score (optional, 0 = not taken)", min_value=0, max_value=800, value=0)
 
-    st.markdown("---")
-    st.markdown("**Research & Experience**")
-    research_exp   = st.checkbox("Have research experience")
+    st.markdown('<div class="section-header">🔬 Research & Experience</div>', unsafe_allow_html=True)
+    research_exp   = st.checkbox("Have research experience", value=False)
     research_years = st.number_input("Research experience (years)", 0.0, 10.0, 0.0, 0.5) if research_exp else 0.0
     papers         = st.number_input("Published papers", 0, 50, 0)
     work_exp       = st.number_input("Work experience (years)", 0.0, 20.0, 0.0, 0.5)
 
-    st.markdown("---")
-    st.markdown("**Financial**")
-    budget             = st.number_input("Annual budget (USD)", 0, 100_000, 18_000, 1_000)
+    st.markdown('<div class="section-header">💰 Financial</div>', unsafe_allow_html=True)
+    budget             = st.number_input("Annual budget (USD)", 0, 150_000, 35_000, 5_000)
     scholarship_needed = st.checkbox("Scholarship required", value=True)
 
-    st.markdown("---")
-
-    # ── Filter panel ────────────────────────────────────────────────────────
-    st.markdown("**Filters**")
-    max_tuition    = st.slider("Max tuition/yr (USD)", 0, 60_000, 60_000, 1_000)
+    st.markdown('<div class="section-header">🔍 Filters</div>', unsafe_allow_html=True)
+    max_tuition    = st.slider("Max tuition/yr (USD)", 0, 80_000, 60_000, 2_000)
     min_pr         = st.slider("Min PR friendliness score", 0, 10, 0)
     scholarship_filter = st.checkbox("Show only universities with scholarship")
+    top_n = st.slider("Show top N results", 5, 30, 10)
 
-    top_n = st.slider("Show top N results", 5, 50, 10)
-
-    if st.button("🔄 Refresh Data"):
+    st.markdown("---")
+    if st.button("🔄 Refresh Data", use_container_width=True):
         st.cache_data.clear()
         st.rerun()
 
@@ -197,6 +314,8 @@ student = {
     "cgpa_scale":                cgpa_scale,
     "ielts_score":               ielts,
     "toefl_score":               toefl if toefl > 0 else None,
+    "gre_score":                 gre_score if gre_score > 0 else None,
+    "gmat_score":                gmat_score if gmat_score > 0 else None,
     "budget_usd_per_year":       budget,
     "research_experience":       research_exp,
     "research_experience_years": research_years,
@@ -209,13 +328,28 @@ student = {
 # ──────────────────────────────────────────────────────────────────────────────
 # Main content
 # ──────────────────────────────────────────────────────────────────────────────
-st.markdown("# 🎓 UniMatch AI — University Recommendation System")
+st.markdown("""
+<div style="text-align:center; padding: 1rem 0; margin-bottom: 1rem;">
+    <h1 style="color:#6366f1; margin-bottom:0.5rem;">🎓 UniMatch AI</h1>
+    <p style="color:#64748b; font-size:1.1rem;">Intelligent University Recommendation System</p>
+</div>
+""", unsafe_allow_html=True)
 
 # Show active country filter prominently
 if preferred_country:
-    st.info(f"🌍 Showing results for: **{preferred_country}**  — change in the sidebar to see other countries")
+    st.markdown(f"""
+    <div class="info-banner">
+        <strong>🌍 Showing results for:</strong> {preferred_country}<br>
+        <small>Change in the sidebar to see other countries</small>
+    </div>
+    """, unsafe_allow_html=True)
 else:
-    st.info("🌍 Showing results for: **All Countries** — select a country in the sidebar to filter")
+    st.markdown("""
+    <div class="info-banner">
+        <strong>🌍 Showing results for:</strong> All Countries<br>
+        <small>Select a country in the sidebar to filter</small>
+    </div>
+    """, unsafe_allow_html=True)
 
 st.markdown("---")
 
@@ -258,11 +392,44 @@ top = scored[:top_n]
 
 # ── Summary metrics ───────────────────────────────────────────────────────────
 col1, col2, col3, col4, col5 = st.columns(5)
-col1.metric("Total in DB",       len(all_programs))
-col2.metric("After Filters",     len(filtered_programs))
-col3.metric("High Chance",       sum(1 for s, c, _, _ in scored if c == "High"))
-col4.metric("Good Chance",       sum(1 for s, c, _, _ in scored if c == "Good"))
-col5.metric("Top Score",         f"{top[0][0]}/100" if top else "—")
+with col1:
+    st.markdown(f"""
+    <div class="metric-card">
+        <div class="metric-value">{len(all_programs)}</div>
+        <div class="metric-label">Total in DB</div>
+    </div>
+    """, unsafe_allow_html=True)
+with col2:
+    st.markdown(f"""
+    <div class="metric-card">
+        <div class="metric-value">{len(filtered_programs)}</div>
+        <div class="metric-label">After Filters</div>
+    </div>
+    """, unsafe_allow_html=True)
+with col3:
+    high_count = sum(1 for s, c, _, _ in scored if c == "Excellent" or c == "High")
+    st.markdown(f"""
+    <div class="metric-card">
+        <div class="metric-value">{high_count}</div>
+        <div class="metric-label">High Match</div>
+    </div>
+    """, unsafe_allow_html=True)
+with col4:
+    good_count = sum(1 for s, c, _, _ in scored if c == "Good")
+    st.markdown(f"""
+    <div class="metric-card">
+        <div class="metric-value">{good_count}</div>
+        <div class="metric-label">Good Match</div>
+    </div>
+    """, unsafe_allow_html=True)
+with col5:
+    top_score = f"{top[0][0]:.0f}" if top else "—"
+    st.markdown(f"""
+    <div class="metric-card">
+        <div class="metric-value">{top_score}</div>
+        <div class="metric-label">Top Score</div>
+    </div>
+    """, unsafe_allow_html=True)
 
 st.markdown("---")
 
